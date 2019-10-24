@@ -3,3 +3,46 @@
 <h1>Patient System</h1>
 
 <h2>Patient Registration Form</h2>
+
+<form asp-action="Registration" method="post">
+    <div class="form-group">
+        <label>Patient Name:</label><input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Age:</label><input asp-for="Age" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Address:</label><input asp-for="Address" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Occupation:</label><input asp-for="Occupation" class="form-control" />
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input asp-for="Insurance" />Has Insurance
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input asp-for="Operation" />Has Operation Before
+        </label>
+    </div>
+
+    <div>
+        <label>Marital Status:
+            <select asp-for="Marital" class="custom-select">
+                <option selected>Choose...</option>
+                <option value="Married">Married</option>
+                <option value="Single">Single</option>
+                <option value="Divorced">Divorced</option>
+                <option value="Widowed">Widowed</option>
+            </select>
+        </label>
+    </div>
+
+    <div class="text-center">
+        <input class="btn btn-primary" type="submit" value="Save" />
+        <input class="btn btn-danger" type="submit" value="Cancel" />
+    </div>
+</form>

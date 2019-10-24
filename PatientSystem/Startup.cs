@@ -26,6 +26,7 @@ namespace PatientSystem
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
 
             app.UseMvc(routes =>
             {
