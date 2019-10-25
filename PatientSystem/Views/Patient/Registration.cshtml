@@ -5,6 +5,8 @@
 <h2>Patient Registration Form</h2>
 
 <form asp-action="Registration" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <input type="hidden" asp-for="RegistrationTime" value="@DateTime.Now" />
     <div class="form-group">
         <label>Patient Name:</label><input asp-for="Name" class="form-control" />
     </div>
@@ -30,7 +32,8 @@
     </div>
 
     <div>
-        <label>Marital Status:
+        <label>
+            Marital Status:
             <select asp-for="Marital" class="custom-select">
                 <option selected>Choose...</option>
                 <option value="Married">Married</option>
