@@ -28,5 +28,11 @@ namespace PatientSystem.Controllers
             }
         }
 
+        public ViewResult ListPatients()
+        {
+            return View(PatientRepository.Patients
+                .OrderBy(p => p.Name));
+        }
+       
     }
 }

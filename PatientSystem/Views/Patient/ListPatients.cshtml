@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Patient>
+
+<div class="panel-body">
+    <h1>Here is the list of patients</h1>
+
+    <table class="table table-sm table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Occupation</th>
+                <th>Has Insurance</th>
+                <th>Had Previous Operation</th>
+                <th>Marital Status</th>
+                <th>Registration Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Patient p in Model)
+            {
+                <tr>
+                    <td>@p.Name</td>
+                    <td>@p.Age</td>
+                    <td>@p.Address</td>
+                    <td>@p.Occupation</td>
+                    <td>@p.Insurance</td>
+                    <td>@p.Operation</td>
+                    <td>@p.Marital</td>
+                    <td>@p.RegistrationTime</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+    <p>Click <a class="navbar-link" asp-action="Registration">here</a> to go back to the Home Page</p>
+
